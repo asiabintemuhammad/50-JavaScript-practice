@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="title" content="Web Dev With Asia ">
+	<meta name="description" content="full stack web development practice">
+	<meta name="keywords" content="life, music , travel">
+	<meta name="robots" content="index, follow">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="language" content="English">
+	<meta name="revisit-after" content="3 days">
+	<title>Javascript</title>
+	<!-- font links -->
+		
+	<!--css link-->	
+
+	<!-- <link rel="stylesheet" type="text/css" href="css/bootstrap.css"> -->
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="css/style.css"> 
+		<link rel="stylesheet" type="text/css" href="css/media.css">
+</head>
+<body>
+
+	<section>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<!-- ex-1 -->
+					<div class="border-bottom">
+						<h2>Click for Date and Time</h2>
+						<button onclick="showDate()" class="btn btn-dark" type="button">Date and Time</button>
+						<h3 id="showDate"></h3>
+					</div>
+					<!-- ex-2 -->
+					<div class="border-bottom">
+						<h2>Click for Date and Time</h2>
+						<button onclick="sDate()" class="btn btn-dark" type="button">Date and Time</button>
+						<h3 id="sDate">The Date is...</h3>
+					</div>
+					<!-- ex-3 -->
+					<div class="border-bottom">
+						<h2>Click for Text</h2>
+						<button onclick="sText()" class="btn btn-dark" type="button">Text</button>
+						<h3 id="sText">The Text is...</h3>
+					</div>
+					<!-- exp-4 -->
+					<div class="border-bottom">
+						<h2>click the button to Turn on/off the light</h2>
+						<button type="button" class="btn btn-dark" onclick="bulbOn()">On</button>
+						<img id="bulb" src="img/bulboff.gif" alt="bulb">
+						<button type="button" class="btn btn-dark" onclick="bulbOff()">Off</button>
+					</div>
+					<!-- ex-5 -->
+					<div class="border-bottom">
+						<h2>Click To change style</h2>
+						<button type="button" onclick="styleChange()" class="btn btn-dark">style</button>
+						<h3 id="sChange">The Text is...</h3>
+					</div>
+					<!-- exp-6 -->
+					<div class="border-bottom">
+						<h2>click the button to show/hide the image</h2>
+						<button type="button" class="btn btn-dark" onclick="showImg()">show</button>
+						<button type="button" class="btn btn-dark" onclick="hideImg()">hide</button>
+						<img id="img" src="img/gojo.jpg" alt="gojo">
+					</div>
+					<!-- exp-7 -->
+					<div class="border-bottom">
+						<h2>click the button to show/hide the text</h2>
+						<button type="button" class="btn btn-dark" onclick="sT()">show</button>
+						<button type="button" class="btn btn-dark" onclick="hT()">hide</button>
+						<h3 id="s_hText">We are human....</h3>
+					</div>
+					<!-- exp-8 -->
+					<div class="border-bottom">
+						<h2>click the button to show output using document.write</h2>
+						<button type="button" class="btn btn-dark" onclick="dW()">document.write</button>
+					</div>
+					<!-- exp-9 -->
+					<div class="border-bottom">
+						<h2>click the button to show output using window.alert</h2>
+						<button type="button" class="btn btn-dark" onclick="winAlert()">window.alert</button>
+					</div>
+					<!-- exp-10 -->
+					<div class="border-bottom">
+						<h2>click the button to show output using console.log</h2>
+						<button type="button" class="btn btn-dark" onclick="conLog()">console.log</button>
+					</div>
+					<!-- exp-11 -->
+					<div class="border-bottom">
+						<h2>click the button to print this page</h2>
+						<button type="button" class="btn btn-dark" onclick="winPrint()">print</button>
+					</div>
+					<!-- exp-12 -->
+					<div class="border-bottom">
+						<h2>click the button to show output using var</h2>
+						<button type="button" class="btn btn-dark" onclick="vOut()">var</button>
+						<h2 id="voutput">var output</h2>
+					</div>
+					<!-- exp-13 -->
+					<div class="border-bottom">
+						<h2>click the button to show output using let</h2>
+						<button type="button" class="btn btn-dark" onclick="lOut()">let</button>
+						<h2 id="loutput">let output</h2>
+					</div>
+					<!-- exp-14 -->
+					<div class="border-bottom">
+						<h2>click the button to show output using const</h2>
+						<button type="button" class="btn btn-dark" onclick="cnOut()">const</button>
+						<h2 id="cnoutput">const output</h2>
+					</div>
+					<!-- exp-15 -->
+					<div class="border-bottom">
+						<h2>click the button to show output for multiple variable data</h2>
+						<button type="button" class="btn btn-dark" onclick="sData()">click</button>
+						<h2 id="showvar">output</h2>
+					</div>
+					<!-- exp-16 -->
+					<div class="border-bottom">
+						<h2>click the button to show output for multiple variable data in a single let</h2>
+						<button type="button" class="btn btn-dark" onclick="shData()">click</button>
+						<h2 id="svar">output</h2>
+					</div>
+					<!-- exp-17 -->
+					<div class="border-bottom">
+						<h2>click the button to show output for array data</h2>
+						<button type="button" class="btn btn-dark" onclick="arrayData()">click</button>
+						<h2 id="arrayoutput">output</h2>
+					</div>
+					<!-- exp-18 -->
+					<div class="border-bottom">
+						<h2>click the button to show output for array to string data</h2>
+						<button type="button" class="btn btn-dark" onclick="arrayToString()">click</button>
+						<h2 id="arraytostring">output</h2>
+					</div>
+					<!-- exp-19 -->
+					<div class="border-bottom">
+						<h2>click the button to show output accessed through data name</h2>
+						<button type="button" class="btn btn-dark" onclick="dataName()">click</button>
+						<h2 id="arraydname">output</h2>
+					</div>
+					<!-- exp-20 -->
+					<div class="border-bottom">
+						<h2>click the button to see the use of length property</h2>
+						<button type="button" class="btn btn-dark" onclick="lProperty()">click</button>
+						<h2 id="lp">output</h2>
+					</div>
+					<!-- exp-21 -->
+					<div class="border-bottom">
+						<h2>click the button to see the use of setting a length property to aray</h2>
+						<button type="button" class="btn btn-dark" onclick="lProperty2()">click</button>
+						<h2 id="lp2">output</h2>
+					</div>
+					<!-- exp-22 -->
+					<div class="border-bottom">
+						<h2>click the button to show output using let </h2>
+						<button type="button" class="btn btn-dark" onclick="lOut1()">let</button>
+						<h2 id="loutput1">let output</h2>
+					</div>
+					<!-- exp-23 -->
+					<div class="border-bottom">
+						<h2>click the button to show output using let</h2>
+						<button type="button" class="btn btn-dark" onclick="lOut2()">let</button>
+						<h2 id="loutput2">let output</h2>
+					</div>
+					<!-- exp-24 -->
+					<div class="border-bottom">
+						<h2>click the button to show output using let</h2>
+						<button type="button" class="btn btn-dark" onclick="lOut3()">let</button>
+						<h2 id="loutput3">let output</h2>
+					</div>
+					<!-- exp-25 -->
+					<div class="border-bottom">
+						<h2>click the button to show output using let</h2>
+						<button type="button" class="btn btn-dark" onclick="lOut4()">let</button>
+						<h2 id="loutput4">let output</h2>
+					</div>
+					<!-- exp-26 -->
+					<div class="border-bottom">
+						<h2>Bold</h2>				  
+						<button type="button" class="btn btn-dark" onclick="boldText()">bold</button>
+						<p id="bold">This text will bold</p>
+					</div>
+					<!-- exp-27 -->
+					<div class="border-bottom">
+						<h2>Italic</h2>				  
+						<button type="button" class="btn btn-dark" onclick="italicText()">bold</button>
+						<p id="italic">This text will italic</p>
+					</div>
+					<!-- exp-28 -->
+					<div class="border-bottom">
+						<h2>Underline</h2>				  
+						<button type="button" class="btn btn-dark" onclick="underlineText()">Underline</button>
+						<p id="under">This text will be Underlined</p>
+					</div>
+					<!-- exp-29 -->
+					<div class="border-bottom">
+						<h2>Change Paragraph Alignment</h2>
+					    <button type="button" class="btn btn-dark" onclick="alignTextLeft()">Align Left</button>
+					    <button type="button" class="btn btn-dark" onclick="alignTextRight()">Align Right</button>
+					    <p id="alignText">This text will align differently.</p>
+					</div>
+					<!-- exp-30 -->
+					<div class="border-bottom">
+						<h2>Date</h2>
+					    <button type="button" class="btn btn-dark" onclick="updateDate()">Show Date</button>
+					    <p id="date">Date will appear here.</p>
+					</div>
+					<!-- exp-31 -->
+					<div class="border-bottom">
+						<h2>Add Two Numbers</h2>
+					    <input type="number" id="num1" placeholder="Number 1">
+					    <input type="number" id="num2" placeholder="Number 2">
+					    <button type="button" class="btn btn-dark" onclick="addNumbers()">Add</button>
+					    <p id="sum">Sum will appear here.</p>
+					</div>
+					<!-- exp-32 -->
+					<div class="border-bottom">
+						<h2>Subtract Two Numbers</h2>
+					    <input type="number" id="number1" placeholder="Number 1">
+					    <input type="number" id="number2" placeholder="Number 2">
+					    <button type="button" class="btn btn-dark" onclick="subtractNumbers()">Subtract</button>
+					    <p id="result">Result will appear here.</p>
+					</div>
+					<!-- exp-33 -->
+					<div class="border-bottom">
+						<h2>Show Current Time</h2>
+					    <button type="button" class="btn btn-dark" onclick="showTime()">Show Time</button>
+					    <p id="time">Time will appear here.</p>
+					</div>
+					<!-- exp-34 -->
+					<div class="border-bottom">
+						<h2>Capitalize Input Text</h2>
+					    <input type="text" id="textInput" placeholder="Enter text">
+					    <button type="button" class="btn btn-dark" onclick="capitalizeText()">Capitalize</button>
+					    <p id="capitalizedText"></p>
+					</div>
+					<!-- exp-35 -->
+					<div class="border-bottom">
+					    <h2>Small Input Text</h2>
+					    <input type="text" id="textIn" placeholder="Enter text">
+					    <button type="button" class="btn btn-dark" onclick="smallText()">Small</button>
+					    <p id="smallText"></p>
+					</div>
+					<!-- exp-36 -->
+					<div class="border-bottom">
+					    <h2>Count Button Clicks</h2>
+					    <button type="button" class="btn btn-dark" onclick="countClicks()">Click Me</button>
+					    <p id="clickCounter">Button clicked 0 times.</p>
+					</div>
+					<!-- exp-37 -->
+					<div class="border-bottom">
+					    <h2>Change Text Background Color</h2>
+					    <button type="button" class="btn btn-dark" onclick="changeTextBgColor()">Change Text Background</button>
+					    <p id="textBg">This text will have a background color.</p>
+					</div>
+					<!-- exp-38 -->
+					<div class="border-bottom">
+					    <h2>Change Text Color</h2>
+					    <button type="button" class="btn btn-dark" onclick="changeTextColor()">Change Text Color</button>
+					    <p id="colorText">This text will change color.</p>
+					</div>
+					<!-- exp-39 -->
+					<div class="border-bottom">
+					    <h2>Add Text Content</h2>
+					    <button type="button" class="btn btn-dark" onclick="addText()">Add Name</button>
+					    <button type="button" class="btn btn-dark" onclick="clearText()">Clear Name</button>
+					    <p id="addText">Name:</p>
+					</div>
+					<!-- exp-40 -->
+					<div class="border-bottom">
+					    <h2>Show Alert Message</h2>
+						<button type="button" class="btn btn-dark" onclick="showAlert()">Show Alert</button>
+					</div>
+					<!-- exp-41 -->
+					<div class="border-bottom">
+					    <h2>Change Button Text</h2>
+   						<button type="button" class="btn btn-dark" id="button" onclick="changeButtonText()">Click Me</button>
+					</div>
+					<!-- exp-42 -->
+					<div class="border-bottom">
+					    <h2> Current Day of the week</h2>
+   						<button type="button" class="btn btn-dark" id="button2" onclick="getDay()">Day</button>
+   						<p id="day">Day</p>
+					</div>
+					<!-- exp-43 -->
+					<div class="border-bottom">
+					    <h2>Post increment </h2>
+						<button type="button" class="btn btn-dark" onclick="poIncrement()">result</button>
+						<p id="POincrement"></p>
+					</div>
+					<!-- exp-44 -->
+					<div class="border-bottom">
+					    <h2>Pre increment </h2>
+						<button type="button" class="btn btn-dark" onclick="pIncrement()">result</button>
+						<p id="pIncrement"></p>
+					</div>
+					<!-- exp-45 -->
+					<div class="border-bottom">
+					    <h2>Post decriment </h2>
+						<button type="button" class="btn btn-dark" onclick="poDecrement()">result</button>
+						<p id="POdecrement"></p>
+					</div>
+					<!-- exp-46 -->
+					<div class="border-bottom">
+					    <h2>Pre decriment </h2>
+						<button type="button" class="btn btn-dark" onclick="pDecrement()">result</button>
+						<p id="pdecrement"></p>
+					</div>
+					<!-- exp-47 -->
+					<div class="border-bottom">
+					    <h2>Modulus</h2>
+						<button type="button" class="btn btn-dark" onclick="modUlus()">result</button>
+						<p id="Modulus"></p>
+					</div>
+					<!-- exp-48 -->
+					<div class="border-bottom">
+					    <h2>The && Operator</h2>
+						<button type="button" class="btn btn-dark" onclick="andOp()">result</button>
+						<p id="ANDOP"></p>
+					</div>
+					<!-- exp-49 -->
+					<div class="border-bottom">
+					    <h2>The && Operator</h2>
+						<button type="button" class="btn btn-dark" onclick="andOp2()">result</button>
+						<p id="ANDOP2"></p>
+					</div>
+					<!-- exp-50 -->
+					<div class="border-bottom">
+					    <h2>The OR Operator</h2>
+						<button type="button" class="btn btn-dark" onclick="orOp()">result</button>
+						<p id="ORop"></p>
+					</div>
+
+
+
+
+
+
+
+				</div>
+			</div>
+		</div>
+	</section>
+	
+
+	<!--js link-->
+	<script src="js/bootstrap.bundle.min.js"></script>
+	<script src="js/script.js"></script>
+</body>
+</html>
